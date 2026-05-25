@@ -10,7 +10,7 @@ import { useInView } from '@/hooks/use-in-view'
 
 const TokensMarquee = dynamic(
   () => import('./landing/TokensMarquee').then(m => ({ default: m.TokensMarquee })),
-  { ssr: false, loading: () => <div style={{ height: 144 }} /> }
+  { ssr: false }
 )
 
 export function LandingPage({ lang }: { lang: Lang }) {
@@ -20,7 +20,6 @@ export function LandingPage({ lang }: { lang: Lang }) {
   const otherLang = isAr ? 'ru' : 'ar'
   const paymentRows = isAr ? PAYMENT_ROWS_AR : PAYMENT_ROWS_RU
 
-  const [marqueeRef, marqueeInView] = useInView()
   const [reviewsRef, reviewsInView] = useInView()
 
   return (
@@ -40,7 +39,7 @@ export function LandingPage({ lang }: { lang: Lang }) {
         <main className={cn('relative', 'px-4', 'sm:px-6', 'md:px-8')}>
           <HeroSection lang={lang} t={t} paymentRows={[...paymentRows]} />
 
-          <div ref={marqueeRef} className={cn('reveal', marqueeInView && 'in-view')}>
+          <div>
             <TokensMarquee />
           </div>
 

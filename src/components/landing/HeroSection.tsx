@@ -28,10 +28,10 @@ export function HeroSection({ lang, t, paymentRows }: Props) {
   return (
     <>
       <div className={cn('mx-auto', 'max-w-5xl', 'pt-8', 'sm:pt-12', 'md:pt-16', 'pb-5', 'sm:pb-8', 'md:pb-10', 'text-center')}>
-        <h1 className={cn('text-3xl', 'sm:text-4xl', 'md:text-5xl', 'lg:text-6xl', 'xl:text-7xl', 'font-semibold', 'tracking-tight', 'leading-[1.08]', 'anim-up')}>
+        <h1 className={cn('text-3xl', 'sm:text-4xl', 'md:text-5xl', 'lg:text-6xl', 'xl:text-7xl', 'font-semibold', 'tracking-tight', 'leading-[1.08]')}>
           {t.heroLine1}<br />{t.heroLine2}
         </h1>
-        <p className={cn('mt-3', 'sm:mt-5', 'text-sm', 'sm:text-base', 'md:text-lg', 'text-muted-foreground', 'max-w-xl', 'mx-auto', 'anim-up', 'anim-d150')}>{t.heroSub}</p>
+        <p className={cn('mt-3', 'sm:mt-5', 'text-sm', 'sm:text-base', 'md:text-lg', 'text-muted-foreground', 'max-w-xl', 'mx-auto')}>{t.heroSub}</p>
       </div>
 
       <div className={cn('flex', 'mb-16', 'sm:mb-20', 'relative', 'justify-center', 'w-full', 'anim-up', 'anim-d300')}>
