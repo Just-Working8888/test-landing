@@ -9,7 +9,7 @@ interface Props extends ReviewData {
 export function ReviewCard({ name, period, avatarBg, avatarText, result, text, wide, resultLabel }: Props) {
   const initials = name.split(' ').map(p => p[0]).join('').slice(0, 2)
   return (
-    <div className={cn('rounded-2xl', 'bg-[oklch(0.18_0_0)]', 'p-5', 'ring-1', 'ring-white/5', 'flex', 'flex-col', 'gap-3', wide && 'lg:col-span-2')}>
+    <div className={cn('rounded-2xl', 'bg-[oklch(0.18_0_0)]', 'p-5', 'ring-1', 'ring-white/5', 'flex', 'flex-col', 'gap-3', wide && 'lg:col-span-2', 'transition-transform', 'duration-300', 'ease-out', 'hover:scale-[1.015]')}>
       <div className={cn('flex', 'items-center', 'gap-3')}>
         <div className={cn('flex', 'h-9', 'w-9', 'shrink-0', 'items-center', 'justify-center', 'rounded-full', avatarBg)}>
           <span className={cn('text-xs', 'font-medium', avatarText)}>{initials}</span>

@@ -61,7 +61,7 @@ export default async function LangLayout({
     <div
       dir={isAr ? 'rtl' : 'ltr'}
       lang={lang}
-      style={isAr ? { fontFamily: "'Cairo', sans-serif" } : undefined}
+      style={isAr ? { fontFamily: 'var(--font-cairo), sans-serif' } : undefined}
       className="min-h-full flex flex-col"
     >
       <Providers>{children}</Providers>

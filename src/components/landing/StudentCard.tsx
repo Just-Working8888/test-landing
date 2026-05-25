@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import avatarJames from '@/assets/avatar-james.jpg'
 import { cn } from '@/lib/utils'
 import type { Lang } from '@/lib/landingI18n'
@@ -33,10 +34,10 @@ export function StudentCard({ lang }: { lang: Lang }) {
   const total = days.reduce((s, d) => s + d.profit, 0)
 
   return (
-    <div className={cn('w-full', 'max-w-[280px]', 'rounded-2xl', 'bg-[oklch(0.16_0_0)]', 'p-4', 'shadow-2xl')}>
+    <div className={cn('w-full', 'max-w-[280px]', 'rounded-2xl', 'bg-[oklch(0.16_0_0)]', 'p-4', 'shadow-2xl', 'transition-transform', 'duration-300', 'hover:scale-[1.01]')}>
       <div className={cn('flex', 'items-center', 'justify-between', 'mb-4')}>
         <div className={cn('flex', 'items-center', 'gap-2.5')}>
-          <img src={avatarJames.src} alt={lbl.name} width={36} height={36} loading="lazy" className={cn('h-9', 'w-9', 'rounded-full', 'object-cover')} />
+          <Image src={avatarJames} alt={lbl.name} width={36} height={36} className={cn('h-9', 'w-9', 'rounded-full', 'object-cover')} />
           <div>
             <div className={cn('text-sm', 'font-semibold', 'text-foreground')}>{lbl.name}</div>
             <div className={cn('text-[11px]', 'text-muted-foreground')}>{lbl.period}</div>
@@ -59,7 +60,7 @@ export function StudentCard({ lang }: { lang: Lang }) {
       <div className={cn('flex', 'items-center', 'justify-between', 'bg-[oklch(0.12_0_0)]', 'rounded-xl', 'px-3', 'py-2.5')}>
         <div>
           <div className={cn('text-[10px]', 'text-muted-foreground/60', 'mb-0.5')}>{lbl.week}</div>
-          <div className={cn('text-base', 'font-bold', 'text-emerald-400')}>+${total.toLocaleString()}</div>
+          <div className={cn('text-base', 'font-bold', 'text-emerald-400')}>+${total.toLocaleString('en-US')}</div>
         </div>
         <div className={cn('h-8', 'w-px', 'bg-white/5')} />
         <div className="text-center">

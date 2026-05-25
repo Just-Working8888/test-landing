@@ -11,7 +11,7 @@ export function SignalCard({ lang }: { lang: Lang }) {
   const lbl = LABELS[lang]
 
   return (
-    <div className={cn('w-full', 'max-w-[300px]', 'rounded-2xl', 'bg-[oklch(0.16_0_0)]', 'p-5', 'shadow-2xl', 'ring-1', 'ring-white/5')}>
+    <div className={cn('w-full', 'max-w-[300px]', 'rounded-2xl', 'bg-[oklch(0.16_0_0)]', 'p-5', 'shadow-2xl', 'ring-1', 'ring-white/5', 'transition-transform', 'duration-300', 'hover:scale-[1.01]')}>
       <div className={cn('flex', 'items-center', 'justify-between', 'mb-4')}>
         <div className={cn('flex', 'items-center', 'gap-2.5')}>
           <svg viewBox="0 0 80 36" className={cn('h-9', 'w-20')} fill="none">
